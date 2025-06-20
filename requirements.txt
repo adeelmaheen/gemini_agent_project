@@ -4,7 +4,3 @@ python-dotenv
 fastapi 
 uvicorn
 
-# uv run chainlit run app.py -w
-# cd gemini_agent_project
-# uv sync             # installs dependencies
-# uv start            # runs chainlit via `start` script

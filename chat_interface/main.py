@@ -5,7 +5,11 @@ from dotenv import load_dotenv
 
 # Load your variables
 load_dotenv()
-os.environ["GEMINI_API_KEY"] = os.getenv("GEMINI_API_KEY")
+gemini_api_key = os.getenv("GEMINI_API_KEY")
+if gemini_api_key is not None:
+    os.environ["GEMINI_API_KEY"] = gemini_api_key
+else:
+    raise ValueError("GEMINI_API_KEY environment variable is not set.")
 
 app = FastAPI()
 
